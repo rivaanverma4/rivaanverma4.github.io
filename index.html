@@ -34,9 +34,74 @@
                         <img src="" alt="">
                     </div>
                     <div class="about-col-2"></div>
+                    <h1 class="sub-title">About Me</h1>
+                    <p>My name is Rivaan, and I am a sophomore at TJHSST. I am interested in AI and have made multiple AI apps.
+                        
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education(Maybe)</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing webapp interfaces</li>
+                            <li><span>Web Development</span><br>Web app development</li>
+                            <li><span>App Development</span><br>Building Andriod/ios apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Exp</span><br>Designing webapp interfaces</li>
+                            <li><span>Exp</span><br>Web app development</li>
+                            <li><span>Exp</span><br>Building Andriod/ios apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Edu</span><br>Designing webapp interfaces</li>
+                            <li><span>Edu</span><br>Web app development</li>
+                            <li><span>Edu</span><br>Building Andriod/ios apps</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-        
+        <div id="services">
+            <div class="containter">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <h2>Web Design</h2>
+                        <p>first service description</p>
+                        <a href="#">learn more</a>
+                    </div>
+                    <div>
+                        <h2>UI/UX Design</h2>
+                        <p>second service description</p>
+                        <a href="#">learn more</a>
+                    </div>
+                    <div>
+                        <h2>App Design</h2>
+                        <p>third service description</p>
+                        <a href="#">learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
     </body>
 </html>
