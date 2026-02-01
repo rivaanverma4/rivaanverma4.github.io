@@ -372,6 +372,40 @@ form .btn2{
 .menuimages{
     display:none;
 }
+.devtitle{
+    font-size:60px;
+    margin-top:200px;
+    margin-left:550px;
+    color:white;
+}
+.devtitle i{
+    padding:15px;
+    color:#1ac9c9;
+}
+.devtext{
+    margin-left:300px
+}
+.devtext a {
+    color: #1ac9c9;
+    text-decoration: none;
+    transition: 0.3s;
+    position: relative;
+}
+
+.devtext a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #1ac9c9;
+    transition: width 0.3s ease;
+}
+
+.devtext a:hover::after {
+    width: 100%;
+}
 @media only screen and (max-width:600px){
     #header{
         background-image:url(phonebackground.png)
@@ -437,3 +471,4 @@ form .btn2{
         font-size:14px;
     }
 }
+
